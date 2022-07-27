@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+        /******** HEADER ********/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    align-items: center;
+    position: fixed;
+    width: 90vw;
+    background-color: rgba(240, 248, 255, 0.534);
+}
+
+.nav-links a{
+    padding: 0 2rem;
+    color: black;
+}
+
+/* .nav a:hover{
+    background-color: green;
+} */
+
+        /******** MAIN ********/
+
+
+#formação, #sobre, #redes, #contato{
+    display: flex;
+    align-items: center;
+    padding: 2rem 5rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /*talvez nao use, apenas para fazer a quebra no mobile*/
+}
+
+#formação{
+    padding-top: 3rem;
+    background-color: rgb(45, 156, 156);
+}
+
+#formação .imagem{
+    /* width: fit-content; */
+    background-image: var('assets/WhatsApp Image 2022-07-26 at 19.24.45.jpeg');
+
+} 
+
+.informações, .sobre-text{
+    width: 25rem;
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+#sobre{ 
+    background-color: rgb(139, 156, 45);
+}
+
+.imagem{
+    background-color: blue;
+    width: 15rem;
+    height: 15rem;
+    margin: 1rem 0;
+}
+
+#redes{
+    background-color: rgb(99, 31, 31);
+}
+
+
+#contato{
+    background-color: darkgrey;
+}
+
+            /******** FOOTER ********/
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+#nav-check, .nav-btn{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .teste{
+        background-color: black;
+        width: 25rem;
+        display: grid;
+    }
+
+    .nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        padding: 13px;
+    }
+
+    #nav-check:checked~label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .menu {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-bottom: 2px solid rgb(2, 2, 2);
+    }
+
+    .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+    }
+
+    #nav-check:not(:checked)~.nav {
+        height: 0;
+    }
+
+    #nav-check:checked~.nav {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+} 
