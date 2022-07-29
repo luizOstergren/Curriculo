@@ -199,13 +199,12 @@
 }
 
 #redes a,#redes p{
+    display: flex;
     margin: 1rem;
     align-items: center;
 }
 
-#redes a{
-    display: flex;
-}
+
 
 #redes img{
     padding-right: 0.5rem;
@@ -223,7 +222,7 @@ footer {
     justify-content: center;
     background-color: black;
     color: white;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 /******** media query ********/
