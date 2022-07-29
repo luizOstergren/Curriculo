@@ -12,7 +12,7 @@
     padding: 1rem 5rem;
     align-items: center;
     height: 3rem;
-    background-color: rgb(88, 63, 114);
+    background-color: rgb(73, 46, 26);
 }
 
 .nav>.nav-header>.nav-title {
@@ -37,7 +37,7 @@
 
 .nav-links>a:hover {
     background-color: rgba(0, 0, 0, 0.062);
-    border: solid 2px transparent;
+    border: solid 1px transparent;
     border-radius: 5px;
 }
 
@@ -55,7 +55,7 @@
 }
 
 #formação {
-    background-color: rgb(45, 156, 156);
+    background-color: rgb(137, 92, 58);
 }
 
 .tecnologias {
@@ -73,7 +73,7 @@
 }
 
 .tec{
-    background-color: red;
+    /* background-color: red; da para mudar a cor do fundo */
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -86,12 +86,12 @@
 
 @keyframes balltec{
     from{
-        left: 7rem;
+        left: 2rem;
         top: 0px; 
     }
     
     to{
-    left: 7rem;
+    left: 2rem;
     top: -2rem; 
     visibility: visible;
     }
@@ -115,7 +115,6 @@
 }
 
 .html{
-    background-color: darkblue;
     animation-name: ballhtml;
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -136,7 +135,6 @@
 }
 
 .css{
-    background-color: blueviolet;
     animation-name: ballcss;
     animation-duration: 1s;
     animation-delay: 1s;
@@ -158,7 +156,6 @@
 }
 
 .javaSc{
-    background-color: coral;
     animation-name: balljs;
     animation-duration: 1s;
     animation-delay: 2s;
@@ -187,7 +184,7 @@
 }
 
 #sobre {
-    background-color: rgb(139, 156, 45);
+    background-color: rgb(141, 88, 55);
 }
 
 .imagem {
@@ -198,7 +195,7 @@
 
 
 #redes {
-    background-color: rgb(99, 31, 31);
+    background-color: rgb(137, 92, 58);
 }
 
 #redes a,#redes p{
@@ -212,6 +209,10 @@
 
 #redes img{
     padding-right: 0.5rem;
+}
+
+hr{
+    color: rgb(83, 80, 255);
 }
 
 /******** FOOTER ********/
