@@ -48,21 +48,135 @@
 #redes{
     display: flex;
     align-items: center;
-    padding: 2rem 5rem;
+    padding: 3rem 5rem;
     justify-content: space-evenly;
     flex-wrap: wrap;
     /*talvez nao use, apenas para fazer a quebra no mobile*/
 }
 
 #formação {
-    padding-top: 3rem;
     background-color: rgb(45, 156, 156);
 }
 
-#formação .imagem {
-    /* width: fit-content; */
-    background-image: var('assets/WhatsApp Image 2022-07-26 at 19.24.45.jpeg');
+.tecnologias {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5rem;
+    /* background-color: blue; */
+}
 
+.tecnologias p{
+    padding-top: 2rem;
+}
+
+.tec{
+    background-color: red;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: relative;
+    animation-name: balltec;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+
+@keyframes balltec{
+    from{
+        left: 7rem;
+        top: 0px; 
+    }
+    
+    to{
+    left: 7rem;
+    top: -2rem; 
+    visibility: visible;
+    }
+}
+
+.ball{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    visibility: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.ball p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.9rem;
+}
+
+.html{
+    background-color: darkblue;
+    animation-name: ballhtml;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes ballhtml{
+    from{
+        opacity: 0;
+        left: 0rem;
+        bottom: 0rem; 
+    }
+    
+    to{
+    left: -2rem;
+    bottom: -4.5rem; 
+    visibility: visible;
+    }
+}
+
+.css{
+    background-color: blueviolet;
+    animation-name: ballcss;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes ballcss{
+    from{
+        opacity: 0;
+        left: 0rem;
+        bottom: 0rem; 
+    }
+    
+    to{
+    left: 0rem;
+    bottom: -4.5rem; 
+    visibility: visible;
+    }
+}
+
+.javaSc{
+    background-color: coral;
+    animation-name: balljs;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes balljs{
+    from{
+        opacity: 0;
+        left: 0px;
+        bottom: 0px; 
+    }
+    
+    to{
+    left: 2rem;
+    bottom: -4.5rem; 
+    visibility: visible;
+    }
 }
 
 .informações,
@@ -77,17 +191,17 @@
 }
 
 .imagem {
-    background-color: blue;
     width: 15rem;
     height: 15rem;
     margin: 1rem 0;
 }
 
+
 #redes {
     background-color: rgb(99, 31, 31);
 }
 
-#redes a, p{
+#redes a,#redes p{
     margin: 1rem;
     align-items: center;
 }
@@ -149,6 +263,7 @@ footer {
         overflow-y: hidden;
         top: 70px;
         left: 0px;
+        z-index: 10;
     }
 
     a {
