@@ -2,17 +2,29 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    color: var(--color);
+}
+
+:root{
+    --background-color: rgba(0,0,0,0.8);
+    --color: white;
+}
+
+body{
+    background: var(--background-color)
 }
 
 /******** HEADER ********/
 
 .nav {
     display: flex;
+    position: fixed;
     justify-content: space-between;
     padding: 1rem 5rem;
     align-items: center;
     height: 3rem;
-    background-color: rgb(73, 46, 26);
+    width: 90%;
+    background-color: var(--background-color);
 }
 
 .nav>.nav-header>.nav-title {
@@ -36,27 +48,34 @@
 }
 
 .nav-links>a:hover {
-    background-color: rgba(0, 0, 0, 0.062);
+    background-color: rgba(0, 0, 0, 0.2);
     border: solid 1px transparent;
     border-radius: 5px;
+    font-size: 1.05em;
 }
 
 /******** MAIN ********/
+
+.init-hidden {
+    opacity: 0;
+    transition: opacity 1.5s linear;
+}
+
+.init-hidden-off {
+    opacity: 1;
+}
 
 #formação,
 #sobre,
 #redes{
     display: flex;
     align-items: center;
-    padding: 3rem 5rem;
+    padding: 13rem 5rem;
     justify-content: space-evenly;
     flex-wrap: wrap;
     /*talvez nao use, apenas para fazer a quebra no mobile*/
 }
 
-#formação {
-    background-color: rgb(137, 92, 58);
-}
 
 .tecnologias {
     width: 15rem;
@@ -65,7 +84,7 @@
     align-items: center;
     justify-content: center;
     padding-right: 5rem;
-    /* background-color: blue; */
+    z-index: -1;
 }
 
 .tecnologias p{
@@ -183,19 +202,10 @@
     padding: 0 1rem;
 }
 
-#sobre {
-    background-color: rgb(141, 88, 55);
-}
-
 .imagem {
     width: 15rem;
     height: 15rem;
     margin: 1rem 0;
-}
-
-
-#redes {
-    background-color: rgb(137, 92, 58);
 }
 
 #redes a,#redes p{
@@ -211,7 +221,7 @@
 }
 
 hr{
-    color: rgb(83, 80, 255);
+    border: 0.1px solid rgba(0,0,0,0.9);
 }
 
 /******** FOOTER ********/
@@ -220,17 +230,20 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: var(--background-color);
     color: white;
     padding: 1rem;
 }
+
+
+
 
 /******** media query ********/
 
 @media (max-width: 800px) {
     .nav>.nav-btn {
         display: inline-block;
-        position: absolute;
+        position: fixed;
         right: 0px;
         top: 0px;
     }
@@ -242,28 +255,29 @@ footer {
         padding: 13px;
     }
 
-    label:hover,
+    /* label:hover,
     #nav-check:checked~label {
-        background-color: rgba(0, 0, 0, 0.3);
-    }
+        background-color: var(--color);
+    } */
 
     span {
         display: block;
         width: 25px;
         height: 10px;
-        border-bottom: 2px solid rgb(2, 2, 2);
+        border-bottom: 2px solid var(--color);
     }
 
     .nav-links {
         position: absolute;
         display: block;
         width: 100%;
-        background-color: #333;
+        height:100vh;
+        background-color: rgba(0, 0, 0, 0.9);
         transition: all 0.3s ease-in;
         overflow-y: hidden;
         top: 70px;
         left: 0px;
-        z-index: 10;
+        z-index: 50;
     }
 
     a {
@@ -275,7 +289,6 @@ footer {
     }
 
     #nav-check:checked~.nav-links {
-        height: 100%;
         overflow-y: auto;
     }
 }
