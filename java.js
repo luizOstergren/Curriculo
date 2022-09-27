@@ -11,9 +11,12 @@ const observer = new IntersectionObserver(entries => {
         observer.observe(element)
     })
 
-    // const checkbox = document.getElementById("nav-check");
-    // let lista = document.getElementsById("#menuclose");
-   
-    // lista.onclick = function()  {
-    //     checkbox.checked = false;
-    // };
+    
+    const checkbox = document.getElementById("nav-check");
+    const links = document.querySelectorAll('.nav-links a')
+
+    for (const link of links) {
+  link.addEventListener('click', function () {
+    checkbox.checked = false;
+  })
+}

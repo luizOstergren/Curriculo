@@ -48,7 +48,7 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   border: solid 1px transparent;
   border-radius: 5px;
-  font-size: 1.05em;
+  font-size: 1.09em;
 }
 
 /******** MAIN ********/
@@ -67,13 +67,14 @@ body {
 #redes {
   display: flex;
   align-items: center;
-  margin: 8rem 5rem;
+  margin: 0rem 5rem;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  padding: 6rem 0;
 }
 
 #formação{
-  margin-top: 13rem;
+  padding-top: 13rem;
 }
 
 .tecnologias {
@@ -257,7 +258,7 @@ footer {
     display: block;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     transition: all 0.3s ease-in;
     overflow-y: hidden;
     top: 70px;
@@ -267,7 +268,7 @@ footer {
   }
 
   a {
-    width: 50%;
+    width: 70%;
   }
 
   #nav-check:not(:checked) ~ .nav-links {
@@ -277,11 +278,6 @@ footer {
   #nav-check:checked ~ .nav-links {
     overflow-y: auto;
   }
-
-
-#formação{
-  margin-top: 9rem;
-}
 
 .sobre-text{
   padding-top: 2rem;
@@ -302,11 +298,11 @@ footer {
   #formação,
   #sobre,
   #redes{
-    margin: 3rem 0.5rem;
+    margin: 1rem 0.5rem;
   }
 
   #formação{
-    margin-top: 10rem;
+    padding-top: 10rem;
   }
 
 
