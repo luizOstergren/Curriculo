@@ -10,3 +10,10 @@ const observer = new IntersectionObserver(entries => {
     Array.from(document.querySelectorAll('.init-hidden')).forEach(element => {
         observer.observe(element)
     })
+
+    // const checkbox = document.getElementById("nav-check");
+    // let lista = document.getElementsById("#menuclose");
+   
+    // lista.onclick = function()  {
+    //     checkbox.checked = false;
+    // };
